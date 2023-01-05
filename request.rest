@@ -1,0 +1,63 @@
+
+GET http://localhost:4000/roles
+
+###
+
+POST http://localhost:4000/roles 
+Content-Type: application/json 
+
+{
+  "name": "customer"
+}
+
+###
+
+GET http://localhost:4000/users
+
+###
+
+POST http://localhost:4000/users 
+Content-Type: application/json 
+
+{
+  "name": "root",
+  "email": "root",
+  "username": "root", 
+  "password": "root",
+  "roles": ["admin"]
+}
+
+###
+
+PUT http://localhost:4000/users/63b5da99fb757d09d2c9a3cf
+Content-Type: application/json 
+
+{
+  "name": "test",
+  "email": "test",
+  "username": "test", 
+  "roles": ["admin"]
+}
+
+### 
+
+GET http://localhost:4000/payments
+
+###
+
+POST http://localhost:4000/payments
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYjY0M2RjMzU5NmE2Zjg1Njg4M2MyOCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTY3Mjg5MjQ2MiwiZXhwIjoxNjcyODk2MDYyfQ.Y4io3W4RqH07cyasam4mPVmoHVNmslo9G1kQNSBY_ls 
+
+{
+  "name": "payment",
+  "description": "description payment",
+  "price": 15153
+}
+
+###
+
+DELETE http://localhost:4000/payments/63b651cafb2727291ee302f3
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYjY0M2RjMzU5NmE2Zjg1Njg4M2MyOCIsInVzZXJuYW1lIjoidGVzdCIsImlhdCI6MTY3Mjg5MjcwOSwiZXhwIjoxNjcyODk2MzA5fQ.MC4xV1H090NYVlkPbgks73f3tVsMKpxxalact5fastw 
+
